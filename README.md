@@ -1,28 +1,28 @@
-# random-unicode
+# random-unicodes
 
 > Generate a random unicode.
 
 
 
-[![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/mock-end/random-unicode/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/mock-end/random-unicodes/blob/master/LICENSE)
 
-[![build:?](https://img.shields.io/travis/mock-end/random-unicode/master.svg?style=flat-square)](https://travis-ci.org/mock-end/random-unicode)
-[![coverage:?](https://img.shields.io/coveralls/mock-end/random-unicode/master.svg?style=flat-square)](https://coveralls.io/github/mock-end/random-unicode)
+[![build:?](https://img.shields.io/travis/mock-end/random-unicodes/master.svg?style=flat-square)](https://travis-ci.org/mock-end/random-unicodes)
+[![coverage:?](https://img.shields.io/coveralls/mock-end/random-unicodes/master.svg?style=flat-square)](https://coveralls.io/github/mock-end/random-unicodes)
 
 
 ## Install
 
 ```
-$ npm install --save random-unicode
+$ npm install --save random-unicodes
 ```
 
 ## Usage
 
-> For more use-cases see the [tests](https://github.com/mock-end/random-unicode/blob/master/test/spec/index.js)
+> For more use-cases see the [tests](https://github.com/mock-end/random-unicodes/blob/master/test/spec/index.js)
 
 
 ```js
-var randomUnicode = require('random-unicode');
+var randomUnicode = require('random-unicodes');
 
 // randomUnicode(min, max);
 // `min` and `max` should between `0` and `1114109`
@@ -71,4 +71,4 @@ randomUnicode(0, 1114109);
 
 Pull requests and stars are highly welcome.
 
-For bugs and feature requests, please [create an issue](https://github.com/mock-end/random-unicode/issues/new).
+For bugs and feature requests, please [create an issue](https://github.com/mock-end/random-unicodes/issues/new).

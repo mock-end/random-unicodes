@@ -1,6 +1,6 @@
 {
-  "name": "random-unicode",
-  "version": "1.0.0",
+  "name": "random-unicodes",
+  "version": "1.0.1",
   "description": "Generate a random unicode.",
   "main": "index.js",
   "directories": {
@@ -35,12 +35,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mock-end/random-unicode.git"
+    "url": "git+https://github.com/mock-end/random-unicodes.git"
   },
   "bugs": {
-    "url": "https://github.com/mock-end/random-unicode/issues"
+    "url": "https://github.com/mock-end/random-unicodes/issues"
   },
-  "homepage": "https://github.com/mock-end/random-unicode#readme",
+  "homepage": "https://github.com/mock-end/random-unicodes#readme",
   "devDependencies": {
     "jshint": "^2.9.1",
     "chai": "^3.5.0",
