@@ -39,7 +39,7 @@ module.exports = function (min, max) {
   var int = randomNatural(min, max);
   var hex = int.toString(16);
 
-  padStart(hex, 4, 0);
+  hex = padStart(hex, 4, 0);
 
   return '\\u' + toUpper(hex);
 };

@@ -13,14 +13,26 @@ describe('random-unicode: ', function () {
   });
 
   it('randomUnicode("\\uFFFF")', function () {
-    expect(randomUnicode('\\uFFFF')).to.be.match(/^\\u[0-9A-F]{4}$/);
+    var count = 100;
+
+    while (count--) {
+      expect(randomUnicode('\\uFFFF')).to.be.match(/^\\u[0-9A-F]{4}$/);
+    }
   });
 
   it('randomUnicode(65535)', function () {
-    expect(randomUnicode(65535)).to.be.match(/^\\u[0-9A-F]{4}$/);
+    var count = 100;
+
+    while (count--) {
+      expect(randomUnicode(65535)).to.be.match(/^\\u[0-9A-F]{4}$/);
+    }
   });
 
   it('randomUnicode("\\uFFFF", "\\uFFFF")', function () {
-    expect(randomUnicode('\\uFFFF', '\\uFFFF')).to.be.equal('\\uFFFF')
+    var count = 100;
+
+    while (count--) {
+      expect(randomUnicode('\\uFFFF', '\\uFFFF')).to.be.equal('\\uFFFF')
+    }
   });
 });
