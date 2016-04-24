@@ -42,6 +42,7 @@ randomUnicode(0, 1114109);
 // => \u2F7FF
 ```
 
+
 ## Contributing
 
 Pull requests and stars are highly welcome.
