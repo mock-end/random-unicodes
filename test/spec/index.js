@@ -12,27 +12,30 @@ describe('random-unicode: ', function () {
     expect(randomUnicode()).to.be.match(/^\\u[0-9A-F]{4,6}$/);
   });
 
-  it('randomUnicode("\\uFFFF")', function () {
+  it('randomUnicode({ max: "\\uFFFF" })', function () {
     var count = 100;
 
     while (count--) {
-      expect(randomUnicode('\\uFFFF')).to.be.match(/^\\u[0-9A-F]{4}$/);
+      expect(randomUnicode({ max: '\\uFFFF' })).to.be.match(/^\\u[0-9A-F]{4}$/);
     }
   });
 
-  it('randomUnicode(65535)', function () {
+  it('randomUnicode({ max: 65535 })', function () {
     var count = 100;
 
     while (count--) {
-      expect(randomUnicode(65535)).to.be.match(/^\\u[0-9A-F]{4}$/);
+      expect(randomUnicode({ max: 65535 })).to.be.match(/^\\u[0-9A-F]{4}$/);
     }
   });
 
-  it('randomUnicode("\\uFFFF", "\\uFFFF")', function () {
+  it('randomUnicode({min: "\\uFFFF", max: "\\uFFFF"})', function () {
     var count = 100;
 
     while (count--) {
-      expect(randomUnicode('\\uFFFF', '\\uFFFF')).to.be.equal('\\uFFFF')
+      expect(randomUnicode({
+        min: '\\uFFFF',
+        max: '\\uFFFF'
+      })).to.be.equal('\\uFFFF')
     }
   });
 });

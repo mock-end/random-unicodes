@@ -7,6 +7,9 @@ var toLength      = require('to-length');
 var toString      = require('to-str');
 var randomNatural = require('random-natural');
 
+
+var MAX = 1114109;
+
 function fixme(val) {
   if (typeof val === 'number') {
     return val;
@@ -16,27 +19,26 @@ function fixme(val) {
   }
 }
 
-module.exports = function (min, max) {
+module.exports = function (options) {
 
   // unicode range: http://billposer.org/Linguistics/Computation/UnicodeRanges.html
 
-  var length = arguments.length;
-
-  if (length === 0) {
-    min = 0;
-    max = 1114109;
-  } else if (length === 1) {
-    max = fixme(min);
-    min = 0;
+  if (options) {
+    options.min = fixme(options.min);
+    options.max = fixme(options.max);
   } else {
-    min = fixme(min);
-    max = fixme(max);
+    options = {
+      min: 0,
+      max: MAX
+    };
   }
 
-  min = clamp(min, 0, 1114109);
-  max = clamp(max, 0, 1114109);
+  options.min = clamp(options.min, 0, MAX);
+  options.max = clamp(options.max, 0, MAX);
 
-  var int = randomNatural(min, max);
+  options.inspected = true;
+
+  var int = randomNatural(options);
   var hex = int.toString(16);
 
   hex = padStart(hex, 4, 0);

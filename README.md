@@ -22,26 +22,45 @@ $ npm install --save random-unicodes
 var randomUnicode = require('random-unicodes');
 
 // API
-// - randomUnicode();
-// - randomUnicode(max);
-// - randomUnicode(min, max);
-// `min` and `max` should between `0` and `1114109`
-// or as unicode, between `'\u0000'` and `'\u10FFFD'`
-// ref: http://billposer.org/Linguistics/Computation/UnicodeRanges.html
+// - randomUnicode([options]);
 
-randomUnicode();
-// => \uaf91
-
-randomUnicode(65535);
-// => \u00F4
-
-randomUnicode('\\uFFFF');
-// => \u00F4
-
-randomUnicode(0, 1114109);
-// => \u2F7FF
+// options
+// - min
+// - max
 ```
 
+By default it will return an unicode between `0` and `1114109`, [unicode ranges](http://billposer.org/Linguistics/Computation/UnicodeRanges.html):
+
+```js
+randomUnicode();
+// => '\uaf91'
+```
+
+Can optionally provide `min` and `max`:
+
+```js
+randomUnicode({ max: '\\uFFFF' });
+// => '\u00F4'
+
+randomUnicode({ min: 0, max: 1114109 });
+// => '\u2F7FF'
+```
+
+**Note**: these `min` and `max` are **inclusive**, so they are included in the range.
+
+
+## Related
+
+- [random-integral](https://github.com/mock-end/random-integral) - Return a random integer.
+- [random-natural](https://github.com/mock-end/random-natural) - Return a random natural number.
+- [random-decimal](https://github.com/mock-end/random-decimal) - Return a random decimal.
+- [random-floating](https://github.com/mock-end/random-floating) - Return a random floating point number.
+- [random-index](https://github.com/mock-end/random-index) - Return a random array-like index.
+- [random-binary](https://github.com/mock-end/random-binary) - Return a random binary number.
+- [random-octal](https://github.com/mock-end/random-octal) - Return a random octal number.
+- [random-hexadecimal](https://github.com/mock-end/random-hexadecimal) - Return a random hexadecimal number.
+- [random-bool](https://github.com/mock-end/random-bool) - Return a random boolean (true/false).
+- [random-char](https://github.com/mock-end/random-char) - Return a random char.
 
 ## Contributing
 

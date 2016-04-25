@@ -44,7 +44,7 @@
   "dependencies": {
     "clamp": "^1.0.1",
     "pad-start": "^1.0.2",
-    "random-natural": "^1.0.2",
+    "random-natural": "^1.0.3",
     "to-length": "^1.0.1",
     "to-str": "^1.0.0",
     "to-upper": "^1.0.1"
